@@ -1,0 +1,112 @@
+.image-with-text{
+    width: 100%;
+    height: 600px;
+    background: #F2F2F2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-with-text .container{
+    height: 470px;   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-with-text .container .image-container{
+    width: 55%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-with-text .container .context{
+    width: 45%;
+    height: 100%;
+    background: #fff;
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.image-with-text .container .context h3{
+    font-size: 19px;
+    font-weight: bold;
+    color: #CB936A;
+}
+
+.image-with-text .container .context h4{
+    width: 80%;
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    color: #333;
+}
+
+.image-with-text .container .context p{   
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    color: #333;
+}
+
+.image-with-text .container .context a{
+    margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+    .image-with-text .container .context{
+        padding: 30px;
+    }
+    .image-with-text .container .context h3{
+        font-size: 16px;
+    }
+    .image-with-text .container .context h4{
+        font-size: 19px;
+    }
+    .image-with-text .container .context p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-with-text{
+        height: auto;
+        padding: 80px 0;
+    }
+    .image-with-text .container{
+        flex-direction: column;
+        height: auto;
+    }
+    .image-with-text .container .image-container{
+        width: 100%;
+        height: 300px;
+    }
+    .image-with-text .container .context{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-with-text .container .context a{
+        margin-top: 20px;
+    }
+    .image-with-text .container .context h4{
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-with-text .container .context a{
+        width: 100%;
+        margin-right:0;
+    }
+    .image-with-text .container .context{
+        padding: 30px 20px;
+    }
+}

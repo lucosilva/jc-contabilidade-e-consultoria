@@ -1,0 +1,55 @@
+.btn-scroll-top{
+    position: fixed;
+    top: 120vh;
+    left: 45%;
+    width: 150px;
+    height: 35px;
+
+    font-size: 12px;
+
+    border: 0;
+    padding: 0 15px;
+    margin: 0;
+
+    border-radius: 30px;
+    background: var(--color1);
+    color: var(--color2);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    opacity: .7;
+    transition: .5s ease-in;
+}
+
+.btn-scroll-top svg{
+    font-size: 16px;
+}
+
+.btn-scroll-top:hover{
+    opacity: 1;
+}
+
+.btn-scroll-top-on{
+    top: calc(100vh - 80px);
+}
+
+
+@media (max-width: 768px) {
+    .btn-scroll-top{
+        left: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-scroll-top{
+        left: 35%;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn-scroll-top{
+        left: 25%;
+    }
+}

@@ -1,0 +1,157 @@
+.container-main-banner{
+    width: 100%;
+    min-height: 500px;
+    height: 700px;
+    max-height: 700px;
+
+    background: var(--color2);
+}
+
+
+.container-main-banner .container{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-main-banner .container .context{
+    width: 100%;    
+    height: 500px;
+
+    color: #fff;
+    z-index: 1;   
+    display: flex;     
+}
+.container-main-banner .container .context .title{
+    position: relative;
+    width: 35%;
+    height: 500px;
+    padding: 60px;
+    
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-main-banner .container .context .bg-main-banner{
+    width: 65%;    
+    height: 500px;
+    margin-right: 60px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-main-banner .container .context .title h1{
+    width: 40%;
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--color1);
+}
+
+.container-main-banner .container .context .title p{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Nunito Sans';
+    color: var(--color4);
+}
+
+@media (max-width: 1200px) {
+    .container-main-banner{
+        min-height: 500px;
+        height: 600px;
+        max-height: 600px;
+    }
+    .container-main-banner .container .context{
+        height: 400px;
+    }
+    .container-main-banner .container .context .title{
+        height: 400px;
+        padding: 30px;        
+    }
+    .container-main-banner .container .context .title h1{
+        font-size: 24px;
+    }
+    .container-main-banner .container .context .title p{
+        font-size: 16px;
+    }
+    .container-main-banner .container .context .bg-main-banner{
+        height: 400px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-main-banner{
+        min-height: auto;
+        height: auto;
+        max-height: fit-content;
+    }
+    .container-main-banner .container .context{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .container-main-banner .container .context .title{
+        width: 100%;
+        height: auto;
+    }
+    .container-main-banner .container .context .title h1{
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+    }
+    .container-main-banner .container .context .title p{
+        text-align: center;
+    }
+
+    .container-main-banner .container .context .bg-main-banner{
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-main-banner .container .context .bg-main-banner{
+        height: 250px;
+    }
+
+    .container-main-banner .container .context .title h1{
+        font-size: 22px;
+        width: 100%;
+    }
+    .container-main-banner .container .context .title p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-main-banner .container .context .bg-main-banner{
+        height: 220px;
+    }
+    
+    .container-main-banner .container .context .title{
+        padding: 20px;
+    }
+
+    .container-main-banner .container .context .title h1{
+        font-size: 19px;
+        width: 100%;
+    }
+    .container-main-banner .container .context .title p{
+        font-size: 16px;
+    }
+}
+
+
+video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

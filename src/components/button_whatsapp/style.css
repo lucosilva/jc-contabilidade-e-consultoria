@@ -1,0 +1,142 @@
+.whatsApp{
+    background: #25D366;
+    border-radius: 32px;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+
+    position: fixed;
+    z-index: 1000;
+    bottom: 76px;
+    right: 20px;
+    line-height: 2;
+
+    width: 54px;
+    height: 54px;
+    
+    box-shadow: 0 2px 8px -4px #575757;
+    background-image: url(../../assets/icon_whatsapp.webp);
+    background-size: 60% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.whatsApp:hover{
+    background: #68d690;
+    background-image: url(../../assets/icon_whatsapp.webp);
+    background-size: 60% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.container-modal-whatsapp{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+
+    background: #57575796;
+    z-index: 1500;
+
+    display: none;
+    justify-content: flex-end;
+
+    transition: 1s ease-in;
+}
+
+.modal-whatsapp{
+    position: relative;
+    width: 325px;
+    height: 100%;
+
+    background: #fff;
+
+    left: 325px;
+    overflow: hidden;
+}
+
+.modal-whatsapp-header{
+    width: 100%;
+    padding: 16px 16px 20px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.modal-whatsapp-header button{
+    background-color: transparent;
+    border: 0;
+}
+.modal-whatsapp-header button svg{
+    font-size: 24px;
+    color: #333;
+}
+.modal-whatsapp-header button:hover svg{
+    color: #575757;
+}
+
+.modal-whatsapp-body{
+    width: 100%;  
+    
+    text-align: left;
+    padding: 0 24px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+.modal-whatsapp-body .title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #231d19;
+    margin-top: auto;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.modal-whatsapp-body .qr-code{
+    width: 200px;
+    height: 200px;
+    margin: 30px 0;
+}
+
+.modal-whatsapp-body p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #231d19;
+    line-height: 24px;
+    margin-bottom: auto;
+}
+
+.open-container{
+    opacity: 1;    
+    display: flex;
+}
+.open-modal-whats .modal-whatsapp{
+    left: 0px;
+    transition: .4s ease-in;
+}
+
+@media (max-width: 768px) {
+    .btn-mobile{
+        display: block;
+    }
+    .btn-desk{
+        display: none;
+    }
+
+    .container-modal-whatsapp{
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .btn-mobile{
+        display: none;
+    }
+    .btn-desk{
+        display: block;
+    }
+}

@@ -1,0 +1,23 @@
+.social-container{
+    display: flex;  
+    margin-bottom: 26px;
+}
+
+.social-container a{
+    margin-right: 20px;
+}
+
+.social-container svg{
+    font-size: 25px;
+    color: var(--color4);
+}
+
+.social-container svg:hover{
+    color: var(--color1);
+}
+
+@media (max-width: 767px){
+    .social-container svg{
+        font-size: 19px;
+    }
+}

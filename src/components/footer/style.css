@@ -1,0 +1,175 @@
+footer{
+    width: 100%;
+    padding: 100px 0 50px 0;
+    background: var(--color1);
+}
+footer .container{
+    display: flex;
+    flex-direction: column;
+}
+footer .container .context{
+    width: 100%;
+    display: flex;
+}
+footer .container .context .apresentation{
+    width: 40%;
+}
+
+footer .container .context .apresentation .text{
+    color: #8C97AC !important;
+}
+
+footer .container .context .apresentation h3{
+    width: 60%;
+    color: #8C97AC !important;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .container .context .apresentation img{
+    height: 50px;
+}
+
+footer .container .context .apresentation p {
+    color: var(--color2) !important;
+    font-size: 12px;
+    width: 60%;
+}
+
+footer .container .context .apresentation .button-action{
+    background: var(--color2) !important;
+}
+
+footer .container .context nav{
+    width: 60%;
+    display: flex;    
+    justify-content: flex-end;    
+}
+
+footer .container .context nav .menuItem{
+    margin-left: 50px;
+}
+
+footer .container .context nav .menuItem .header{
+    margin-bottom: 16px;
+}
+
+footer .container .context nav .menuItem .header span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #8C97AC;
+    text-decoration: none;
+}
+
+footer .container .context nav .menuItem ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .container .context nav .menuItem ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer .container .context nav .menuItem ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #E9F7FE;
+
+    text-decoration: none;
+}
+footer .container .context nav .menuItem ul li a:hover{
+    color: var(--color4);
+}
+
+footer .container .context nav .contato ul{
+    width: 200px;
+}
+
+footer .container .context nav .contato ul li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #E9F7FE;
+}
+
+footer .container .context nav .contato ul li a{
+    width: 200px;
+}
+
+footer .container .container-bottom{
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color2);
+
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .container-bottom svg{
+    color: #fff;
+}
+
+@media (max-width: 991px){   
+    footer .container .context{
+        flex-direction: column;
+    }
+    footer .container .context .apresentation{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer .container .context .apresentation img{
+        height: 40px;
+    }
+    footer .container .context nav{
+        width: 100%;
+        justify-content: flex-start;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 100px;
+        grid-row-gap: 30px;
+    }
+    footer .container .context nav .menuItem{
+        margin: 0;
+    }
+
+    footer .container .context .apresentation h3{
+        width: 100%;
+    }
+    footer .container .context .apresentation p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px){   
+    footer{
+        padding: 50px 0 50px 0;
+    }
+    footer .container .context nav{
+        grid-template-columns: auto;
+        grid-column-gap: initial;
+    }
+
+    footer .container .context .apresentation .logo .text{
+        font-size: 19px;
+    }
+
+    footer .container .container-bottom{
+        flex-direction: column;
+    }
+
+    footer .container .container-bottom span{
+        margin-bottom: 10px;
+        font-size: 8px;
+    }
+
+    footer .container .container-bottom .social-container{
+        margin: 0;
+    }
+}

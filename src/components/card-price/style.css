@@ -1,0 +1,152 @@
+.card-price{
+    width: 320px;
+    height: 460px;
+    padding: 40px 20px;
+
+    border-radius: 6px;    
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card-price h4{
+    font-family: 'Nunito Sans';
+
+    font-size: 24px;
+    font-weight: bold;
+
+    padding: 0 0 20px 0;
+    margin: 0;
+    
+    color: #333;
+
+}
+
+.card-price .price p{
+    font-size: 42px;
+    font-family: 'Nunito Sans';
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    letter-spacing: -3px;
+
+    color: #CB936A;
+
+
+}
+.card-price .price p span{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0px;
+}
+
+
+.card-price .plano{
+    padding: 2px 22px;
+    border-radius: 6px;
+    width: fit-content;
+    color: #85522e;
+    background: #eccab1;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-price .plano span{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.card-price ul{
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+.card-price ul li {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 5px 0;
+}
+
+.card-price ul li .yes{
+    border-color: rgb(81, 180, 81) !important;
+    background: rgb(81, 180, 81);
+    color: #fff;
+}.card-price ul li .yes svg{
+    border-radius: 50%;
+}
+
+.card-price ul li .no{
+    color: rgb(248, 78, 78);
+    border-color: rgb(248, 78, 78) !important;
+    background:rgb(248, 78, 78);
+    color: #fff;
+}.card-price ul li .no svg{
+    border-radius: 50%;
+}
+
+.card-price ul li .icon-container-price {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid ;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-price ul li .icon-container-price svg{
+    font-size: 14px;
+}
+
+
+.card-price a{
+    width: 100%;
+    height: 45px;
+    
+    margin-top: auto;
+    background: transparent !important;
+    color: #85522e !important;
+    border: 1px solid #85522e !important;
+    margin-right: 0;
+
+    justify-content: center;
+}
+.card-price a:hover{
+    background: #eccab1 !important;
+    color: #85522e !important;
+}
+.card-price a svg{
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .card-price ul li{
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px){
+    .card-price ul li{
+        align-items: center;
+    }
+    .card-price{
+        width: 100%;
+    }
+
+}

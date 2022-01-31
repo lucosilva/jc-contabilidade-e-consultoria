@@ -1,0 +1,76 @@
+.card-with-icon-center{
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+
+    border-radius: 6px;    
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-with-icon-center .icon-container {
+    width: 60px;
+    height: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-with-icon-center .icon-container img{
+    width: 80px;
+    height: 80px;
+}
+
+.card-with-icon-center h4{
+    font-size: 19px;
+    font-weight: bold;
+
+    padding: 20px 0 10px 0;
+    margin: 0;
+    
+    color: #333;
+}
+
+.card-with-icon-center p{
+    height: 120px;
+    font-size: 16px;
+    font-family: Nunito Sans;
+
+    color: #333;
+    text-align: center;
+}
+
+@media (max-width: 992px){
+    .card-with-icon-center{
+        width: 290px;
+    }
+}
+
+@media (max-width: 576px){
+    
+    .card-with-icon-center:nth-of-type(2){
+        margin: 60px 0;
+    }
+
+    .card-with-icon-center{
+        width: 100%;
+        height: 150px;
+    }
+    .card-with-icon-center .icon-container{
+        width: 48px;
+        height: 48px;
+    }
+    .card-with-icon-center .icon-container svg{
+        font-size: 19px;
+    }
+    .card-with-icon-center h4{
+        font-size: 16px;
+    }
+
+}

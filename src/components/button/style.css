@@ -1,0 +1,31 @@
+.button-action{
+    width: 175px;
+    height: 35px;
+    border-radius: 6px;
+
+    padding: 12px 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-right: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: .6s ease-in-out;
+
+    box-shadow: 1px 1px 1px #33333394;
+    background: var(--color2);
+
+
+}
+
+.button-action:hover{
+    background: var(--color4);
+    color: #ffffff ;
+}

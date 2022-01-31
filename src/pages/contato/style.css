@@ -1,0 +1,139 @@
+.contatos .form-container{
+    padding: 40px 0;
+}
+.contatos .contatos-lista-container{
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    background: var(--color2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contatos .contatos-lista-container .context-container{
+    width: 100%;
+    height: 300px;
+
+    display: flex;    
+}
+
+.contatos .contatos-lista-container .context-container .left{
+    width: 65%;
+    height: 100%;
+    background: var(--color3);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 30px;
+}
+
+.contatos .contatos-lista-container .context-container .left .enderecos{
+    width: 180px;
+    height: 170px;
+    padding: 10px;    
+}
+.contatos .contatos-lista-container .context-container .left .atendimento{
+    width: 180px;
+    height: 170px;
+    padding: 10px;    
+}
+
+.contatos .contatos-lista-container .context-container .left span{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color5);    
+}
+
+.contatos .contatos-lista-container .context-container .left p{
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Nunito Sans';
+    color: var(--color1);
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.contatos .contatos-lista-container .context-container .left .contato-atendimento{
+    width: 180px;
+    height: 170px;
+    padding: 10px;
+}
+
+.contatos .contatos-lista-container .context-container .right{
+    width: 45%;
+    height: 100%;
+    background: var(--color1);
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;        
+}
+
+.contatos .contatos-lista-container .context-container .right .text h4{
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Nunito Sans';
+    color: var(--color2);    
+}
+
+.contatos .contatos-lista-container .context-container .right .email p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Nunito Sans';
+    color: var(--color4);    
+}
+
+@media (max-width: 1100px) {
+    .contatos .contatos-lista-container .context-container .right{
+        padding: 50px;
+    }    
+}
+
+
+@media (max-width: 768px) {
+
+    .contatos .form-container{
+        padding: 0;
+    }
+    .contatos .contatos-lista-container{
+        height: auto;
+    }
+    .contatos .contatos-lista-container .context-container{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .contatos .contatos-lista-container .context-container .right{
+        width: 100%;
+        padding: 40px;
+    }    
+    .contatos .contatos-lista-container .context-container .left{
+        width: 100%;
+        padding: 30px;
+    }
+    .contatos .contatos-lista-container .context-container .left .enderecos,
+    .contatos .contatos-lista-container .context-container .left .atendimento,
+    .contatos .contatos-lista-container .context-container .left .contato-atendimento{
+        height: 125px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contatos .contatos-lista-container .context-container .left{
+        padding: 30px 20px;
+        text-align: center;
+    }  
+
+    .contatos .contatos-lista-container .context-container .left{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .contatos .contatos-lista-container .context-container .left .enderecos,
+    .contatos .contatos-lista-container .context-container .left .atendimento,
+    .contatos .contatos-lista-container .context-container .left .contato-atendimento{
+        width: 100%;
+    }
+}

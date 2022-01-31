@@ -1,0 +1,23 @@
+.lista-servicos-container{
+    margin: 80px 0;
+}
+
+.lista-servicos-container .container .lista-servicos-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #333;
+}
+
+.lista-servicos-container .container .lista-servicos-title h3{
+    font-size: 19px;
+    font-weight: bold;
+    color: #CB936A;
+}
+
+.lista-servicos-container .container .lista-servicos-title p{
+    font-size: 22px;
+    font-weight: 500;
+}

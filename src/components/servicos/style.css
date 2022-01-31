@@ -1,0 +1,38 @@
+.servicos{
+    width: 100%;
+    padding: 80px 0;
+    background: var(--color3);
+}
+
+.servicos .servicos-title .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicos .servicos-title .container h3{
+    font-size: 19px;
+    font-weight: bold;
+    color: #CB936A;
+}
+
+.servicos .servicos-title .container p{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+@media (max-width: 576px) {
+    .servicos .servicos-title .container p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .servicos .servicos-title .container h3{
+        font-size: 16px;
+    }
+    .servicos .servicos-title .container p{
+        font-size: 14px;
+    }
+}
