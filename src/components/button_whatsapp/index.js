@@ -14,7 +14,7 @@ function ButtonWhatsApp() {
     }
 
     return (
-        <>
+        <>           
             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511964674634&text=Olá, JC Contabilidade e Consultoria" className='whatsApp btn-mobile'></a>
             <button className='whatsApp btn-desk' onClick={()=>{onChange()}}></button>
 

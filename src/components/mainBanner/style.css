@@ -119,7 +119,7 @@
 
 @media (max-width: 576px) {
     .container-main-banner .container .context .bg-main-banner{
-        height: 250px;
+        height: 420px;
     }
 
     .container-main-banner .container .context .title h1{
@@ -129,11 +129,19 @@
     .container-main-banner .container .context .title p{
         font-size: 16px;
     }
+
+
+    .container-main-banner .container{
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 320px) {
     .container-main-banner .container .context .bg-main-banner{
-        height: 220px;
+        height: 320px;
     }
     
     .container-main-banner .container .context .title{
