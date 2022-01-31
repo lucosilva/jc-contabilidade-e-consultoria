@@ -11,7 +11,7 @@ function CardContainer({ typeCard, objCard, buttonAction }) {
 
     const card = [...objCard];
     const action = { ...buttonAction };
-   
+
     var TypeSelect;
 
     switch (typeCard) {
@@ -24,14 +24,15 @@ function CardContainer({ typeCard, objCard, buttonAction }) {
         case "card-with-button":
             TypeSelect = CardWithButton;
             break;
+        default:
     }
 
     return (
         <section className='card-container'>
             <div className="container">
                 <div className="list">
-                    {card.map(({ title, icon_main, context, cta, urlAction }) => {
-                        return <TypeSelect titulo={title} icon={icon_main} cta={cta} urlAction={urlAction}> {context} </TypeSelect >
+                    {card.map(({ title, icon_main, context, cta, urlAction }, index) => {
+                        return <TypeSelect key={index} titulo={title} icon={icon_main} cta={cta} urlAction={urlAction}> {context} </TypeSelect >
                     })}
                 </div>
 

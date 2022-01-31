@@ -7,8 +7,8 @@ function Precos() {
     return (
         <section className='precos'>
 
-            <div class="precos-title">
-                <div class="container">
+            <div className="precos-title">
+                <div className="container">
                     <h3>Traga sua empresa para a OSP</h3>
                     <p>Temos uma GRANDE expertise nos seguintes setores.</p>
                 </div>

@@ -26,9 +26,9 @@ function ButtonWhatsApp() {
                         </button>
                     </div>
                     <div className="modal-whatsapp-body">
-                        <h2 class="title"> Escaneie o QRCode e tire dúvidas pelo WhatsApp </h2>
+                        <h2 className="title"> Escaneie o QRCode e tire dúvidas pelo WhatsApp </h2>
                         
-                        <img aria-hidden="false" class="qr-code" src={qrcode} alt="Qrcode para acessar o atendimento por whatsapp no celular."/>
+                        <img aria-hidden="false" className="qr-code" src={qrcode} alt="Qrcode para acessar o atendimento por whatsapp no celular."/>
                         
                         <p>Para acessar nosso canal no Whatsapp e tirar dúvidas, escaneie o QR Code
                              com a câmera do seu smartphone ou adicione o numero (11) 96467-4634 em seus contatos.</p>                        

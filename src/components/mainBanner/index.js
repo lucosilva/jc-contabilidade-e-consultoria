@@ -1,8 +1,8 @@
-import react from "react";
+import React from "react";
 import './style.css';
 import ArrowScroll from '../ArrowScroll';
 
-import videoBanner from '../../assets/banner-video2.mp4';
+// import videoBanner from '../../assets/banner-video2.mp4';
 
 function MainBanner({ titulo, subtitulo, urlImg }) {
 
@@ -10,7 +10,7 @@ function MainBanner({ titulo, subtitulo, urlImg }) {
         <div className="container-main-banner">
             <div className="container">
                 <div className="context">
-                    <div class="title">
+                    <div className="title">
                         <h1>{titulo}</h1>
                         <p>{subtitulo}</p>
                     </div>

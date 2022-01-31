@@ -7,29 +7,7 @@ import { FiCheck } from "react-icons/fi";
 
 function CardPrice({ titulo, children, cta, urlAction, price}) {
     
-    const lista = [...children];
-
-    
-                {/* <CardPrice icon={FiBox} titulo="Início Brilhante" price="300,00" cta="Escolher Plano" urlAction="#" >
-                    {[
-                        {
-                            contempla: 'yes',
-                            text: 'Fatura até R$ 20.000/Mês'
-                        },
-                        {
-                            contempla: 'yes',
-                            text: 'Seus Impostos Mensais'
-                        },
-                        {
-                            contempla: 'yes',
-                            text: 'Suporte Completo'
-                        },
-                        {
-                            contempla: 'no',
-                            text: 'Folha de Pagamento'
-                        },
-                    ]}
-                </CardPrice> */}
+    const lista = [...children];            
     
     return (
         <div className="card-price">
@@ -42,11 +20,11 @@ function CardPrice({ titulo, children, cta, urlAction, price}) {
             </div>
             <ul>
                 {
-                    lista.map((itemLista)=>{
+                    lista.map((itemLista,index)=>{
                         const {contempla, text} = itemLista;
                         const classesCss = 'icon-container-price '+ contempla;
-                        const Icon = contempla == 'yes' ? FiCheck : FiX;
-                        return <li><span className={classesCss}><Icon/></span>{text}</li>
+                        const Icon = contempla === 'yes' ? FiCheck : FiX;
+                        return <li key={index}><span className={classesCss}><Icon/></span>{text}</li>
                     })
                 }                             
             </ul>

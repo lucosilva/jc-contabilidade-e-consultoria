@@ -15,7 +15,7 @@ function Servicos() {
     return (
         <section className='servicos'>
 
-            <div class="servicos-title">
+            <div className="servicos-title">
                 <div className="container">
                     <h3>Traga sua empresa para a OSP</h3>
                     <p>Temos uma GRANDE expertise nos seguintes setores.</p>
