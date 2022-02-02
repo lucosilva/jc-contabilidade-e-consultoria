@@ -17,8 +17,8 @@ function TextWithAction({titulo, subTitulo, contexto, btnObj }) {
                     </div>
                 </div>
                 <div className="container-action">
-                    {lista.map(({url_, titulo_, classAdicional_, ancora}, index)=>{
-                        return <ButtonAction key={index} url={url_} titulo={titulo_} classAdd={classAdicional_} ancora={ancora}/>
+                    {lista.map(({url_, titulo_, classAdicional_, ancora, ancoraMobile}, index)=>{
+                        return <ButtonAction key={index} url={url_} titulo={titulo_} classAdd={classAdicional_} ancora={ancora} ancoraMobile={ancoraMobile}/>
                     })}                    
                 </div>
             </div>

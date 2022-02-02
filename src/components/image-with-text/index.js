@@ -4,7 +4,7 @@ import './style.css';
 import ButtonAction from '../button';
 
 function ImageWithText({titulo, subtitulo, urlImg, paragrafo, btn}) {
-    const {cta, url, classAdd, ancora} = btn;
+    const {cta, url, classAdd, ancora, ancoraMobile} = btn;
     return (
         <section className='image-with-text'>
             <div className="container">
@@ -15,7 +15,7 @@ function ImageWithText({titulo, subtitulo, urlImg, paragrafo, btn}) {
                     <h4>{subtitulo}</h4>
                     <p>{paragrafo}</p>
 
-                    <ButtonAction url={url} titulo={cta} classAdd={classAdd} ancora={ancora}/>
+                    <ButtonAction url={url} titulo={cta} classAdd={classAdd} ancora={ancora} ancoraMobile={ancoraMobile}/>
                 </div>
             </div>
         </section>

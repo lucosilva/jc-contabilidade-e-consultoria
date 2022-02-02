@@ -36,6 +36,7 @@ function Home() {
                         },
                         {
                             url_: "",
+                            ancoraMobile:"1900",
                             ancora: "1400",
                             titulo_: "Transferir minha empresa",
                             classAdicional_: "bg-beige"
@@ -52,7 +53,8 @@ function Home() {
                     Agende uma reunião conosco."
                     urlImg={ImageWithTextImg}
                     btn={{
-                        ancora:"3900",
+                        ancora:"3970",
+                        ancoraMobile: "5700",
                         cta: "Planos",
                         url: "#",
                         classAdd: "bg-black"
