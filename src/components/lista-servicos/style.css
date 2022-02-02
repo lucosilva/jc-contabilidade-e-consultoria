@@ -25,7 +25,8 @@
 
 @media (max-width: 768px) {
     
-    .lista-servicos-container .container .lista-servicos-title p{
+    .lista-servicos-container .container .lista-servicos-title p,
+    .lista-servicos-container .container .lista-servicos-title h3{
         text-align: center;
     }
 

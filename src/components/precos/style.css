@@ -49,7 +49,8 @@
     .precos .precos-container{
         grid-template-columns: auto;
     }
-    .precos .precos-title .container p{
+    .precos .precos-title .container p,
+    .precos .precos-title .container h3{
         text-align: center;
     }
 }

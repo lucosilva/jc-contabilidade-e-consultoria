@@ -23,7 +23,8 @@
 }
 
 @media (max-width: 576px) {
-    .servicos .servicos-title .container p{
+    .servicos .servicos-title .container p,
+    .servicos .servicos-title .container h3{
         text-align: center;
     }
 }
