@@ -13,12 +13,12 @@ function Beneficios() {
                     {
                         title: "Contabilidade Especializada",
                         icon_main: img1,
-                        context: "A OSP Digital atua com contabilidade especializada em Micro e Pequenas Empresas, Advogados, Médicos e MEI"
+                        context: "Atuamos com contabilidade especializada em Micro e Pequenas Empresas, Advogados, Médicos e MEI"
                     },
                     {
                         title: "Atendimento Pessoal",
                         icon_main: img4,
-                        context: "Na OSP Contabilidade Digital você é atendido por pessoas de verdade, utilizando ferramentas como Whatsapp e Vídeo Conferência na comodidade do seu escritório"
+                        context: "Na JC contabilidade e Consultoria você é atendido por pessoas de verdade, utilizando ferramentas como Whatsapp e Vídeo Conferência na comodidade do seu escritório"
                     },
                     {
                         title: "Internet e Tecnologia",

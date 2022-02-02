@@ -1,0 +1,52 @@
+.privacyPolicy{
+    background: #fff;
+}
+
+.privacyPolicy .container{
+    padding: 150px 200px 50px 200px;
+}
+
+
+.privacyPolicy span{
+    font-size: 12px;
+    color: var(--color5);
+}
+
+.privacyPolicy h1, h3{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;    
+    color: var(--color5);
+}
+
+.privacyPolicy h4{
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--color5);
+}
+
+.privacyPolicy p, li{
+    font-size: 14px;
+    color: var(--color5);
+    text-align: justify;
+}
+
+
+
+@media (max-width: 992px){
+    .privacyPolicy .container{
+        padding: 100px;
+    }
+}
+
+@media (max-width: 768px){
+    .privacyPolicy .container{
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 576px){
+    .privacyPolicy .container{
+        padding: 100px 35px;
+    }
+}

@@ -27,7 +27,7 @@ function Home() {
                 <TextWithAction
                     titulo="Contabilidade para PMEs"
                     subTitulo="Realizamos toda a CONTABILIDADE da sua empresa de forma SEGURA, FÁCIL E ÁGIL, aliando alta tecnologia com planos adequados a sua necessidade"
-                    contexto="Na OSP a contabilidade da sua empresa é realizada por pessoas, especialistas no seu segmento de atuação, utilizando o melhor que a tecnologia pode oferecer."
+                    contexto="Na JC contabilidade e Consultoria, a contabilidade da sua empresa é realizada por pessoas, especialistas no seu segmento de atuação, utilizando o melhor que a tecnologia pode oferecer."
                     btnObj={[
                         {
                             url_: "/nova-empresa/",
@@ -60,9 +60,9 @@ function Home() {
                 />
 
                 <TextWithActionOne
-                    titulo="GARANTIA OSP"
+                    titulo="Garantia JC contabilidade e Consultoria"
                     subtitulo="SE EM 30 DIAS VOCÊ NÃO FICAR SATISFEITO NÓS DEVOLVEMOS SUA MENSALIDADE"
-                    paragrafo="Na OSP Digital você tem garantia de atendimento as suas expectativas!"
+                    paragrafo="Na JC contabilidade e Consultoria você tem garantia de atendimento as suas expectativas!"
                     btnAction={{
                         cta: "Fale com nosso especialista",
                         url: "/contato/",

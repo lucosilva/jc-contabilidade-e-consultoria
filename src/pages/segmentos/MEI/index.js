@@ -6,7 +6,7 @@ import ImageWithText from '../../../components/image-with-text';
 import Form from '../../../components/full-form';
 
 import imgBanner from '../../../assets/duas-pessoas-segurando-uma-caixa-de-madeira.jpg';
-import imgText from '../../../assets/homem-sendo-atendido-por-mulher.jpg';
+import imgText from '../../../assets/banner-1.jpg';
 
 function SegmentoMEI() {
 

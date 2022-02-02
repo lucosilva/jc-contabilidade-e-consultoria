@@ -9,14 +9,14 @@ function Precos() {
 
             <div className="precos-title">
                 <div className="container">
-                    <h3>Traga sua empresa para a OSP</h3>
-                    <p>Temos uma GRANDE expertise nos seguintes setores.</p>
+                    <h3>Traga sua empresa para a JC contabilidade e Consultoria</h3>
+                    <p>Conheça nossos planos.</p>
                 </div>
             </div>
 
             <div className="container">
                 <div className="precos-container">
-                    <CardPrice titulo="Início Brilhante" price="300,00" cta="Escolher Plano" urlAction="/contato/" >
+                    <CardPrice titulo="Bronze" price="" cta="Escolher Plano" urlAction="/contato/" >
                         {[
                             {
                                 contempla: 'yes',
@@ -34,9 +34,13 @@ function Precos() {
                                 contempla: 'no',
                                 text: 'Folha de Pagamento'
                             },
+                            {
+                                contempla: 'no',
+                                text: 'Gestão financeira'
+                            }
                         ]}
                     </CardPrice>
-                    <CardPrice titulo="Hora da Arrancada" price="300,00" cta="Escolher Plano" urlAction="/contato/" >
+                    <CardPrice titulo="Prata" price="300,00" cta="Escolher Plano" urlAction="/contato/" >
                         {[
                             {
                                 contempla: 'yes',
@@ -54,9 +58,13 @@ function Precos() {
                                 contempla: 'yes',
                                 text: 'Folha de Pagamento até 3 funcionários'
                             },
+                            {
+                                contempla: 'yes',
+                                text: 'Gestão financeira'
+                            }
                         ]}
                     </CardPrice>
-                    <CardPrice titulo="Enterprise" price="300,00" cta="Escolher Plano" urlAction="/contato/" >
+                    <CardPrice titulo="Ouro" price="300,00" cta="Escolher Plano" urlAction="/contato/" >
                         {[
                             {
                                 contempla: 'yes',
@@ -74,6 +82,10 @@ function Precos() {
                                 contempla: 'yes',
                                 text: 'Folha de Pagamento até 5 funcionários'
                             },
+                            {
+                                contempla: 'yes',
+                                text: 'Gestão financeira'
+                            }
                         ]}
                     </CardPrice>
                 </div>

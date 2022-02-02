@@ -93,7 +93,7 @@ function NavBar({ active }) {
                             </ul>
                         </li>
                         <li className="nav-item me-xl-3">
-                            <Link className="nav-link" to="#">Blog</Link>
+                            <a className="nav-link" href="http://consultoriatributariaefiscal.blogspot.com/">Blog</a>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/contato/">Fale Conosco</Link>

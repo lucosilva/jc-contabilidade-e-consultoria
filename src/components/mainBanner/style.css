@@ -41,7 +41,6 @@
 .container-main-banner .container .context .bg-main-banner{
     width: 65%;    
     height: 500px;
-    margin-right: 60px;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,8 +117,16 @@
 }
 
 @media (max-width: 576px) {
+
+    video{
+        width: auto !important;
+        height: 100%;
+    }
     .container-main-banner .container .context .bg-main-banner{
-        height: 420px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
     }
 
     .container-main-banner .container .context .title h1{
@@ -140,9 +147,9 @@
 }
 
 @media (max-width: 320px) {
-    .container-main-banner .container .context .bg-main-banner{
+    /* .container-main-banner .container .context .bg-main-banner{
         height: 320px;
-    }
+    } */
     
     .container-main-banner .container .context .title{
         padding: 20px;

@@ -12,12 +12,12 @@ function CardPrice({ titulo, children, cta, urlAction, price}) {
     return (
         <div className="card-price">
             <h4>{titulo}</h4>
-            <div className="price">
+            {/* <div className="price">
                 <p><span>R$ </span>{price}</p>
             </div>
             <div className="plano">
                 <span>mensal</span>
-            </div>
+            </div> */}
             <ul>
                 {
                     lista.map((itemLista,index)=>{

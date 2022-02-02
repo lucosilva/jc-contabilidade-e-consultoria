@@ -7,6 +7,7 @@ import TI from './pages/segmentos/TI';
 import MEI from './pages/segmentos/MEI';
 import NovaEmrpresa from './pages/nova-empresa';
 import Contato from './pages/contato';
+import Privacidade from './pages/privacidade';
 
 import Page404 from './pages/page404';
 
@@ -17,6 +18,7 @@ function RoutesPage() {
                 <Route path="/" element={<Home />} exact />
                 <Route path="/nova-empresa/" element={<NovaEmrpresa />} />
                 <Route path="/contato/" element={<Contato />} />
+                <Route path="/privacidade/" element={<Privacidade />} />
                 <Route path="/segmentos/contabilidade-para-medicos/" element={<Medico />} />
                 <Route path="/segmentos/contabilidade-para-advogados/" element={<Advogados />} />
                 <Route path="/segmentos/contabilidade-para-ti/" element={<TI />} />

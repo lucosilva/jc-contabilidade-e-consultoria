@@ -7,7 +7,7 @@ function ListaServicos() {
         <section className='lista-servicos-container'>
             <div className="container">
                 <div className="lista-servicos-title">
-                    <h3>Traga sua empresa para a OSP</h3>
+                    <h3>Traga sua empresa para a JC contabilidade e Consultoria</h3>
                     <p>Temos uma GRANDE expertise nos seguintes setores.</p>
                 </div>
             </div>
@@ -39,18 +39,18 @@ function ListaServicos() {
                         cta: "Fazer contato agora",
                         urlAction: "/segmentos/contabilidade-para-mei/"
                     },
-                    {
-                        title: "Empregada Doméstica",
-                        context: "Aqui o a sua doméstica fica 100% dentro da Lei e com todos os seus direitos garantidos. Gerenciamento completo, guia DAE, envio de documentação do mês, suporte telefônico, chat e e-mail, fazemos seu cadastro no eSocial, emitimos todos os documentos de admissão.",
-                        cta: "Fazer contato agora",
-                        urlAction: "#"
-                    },
-                    {
-                        title: "Youtuber",
-                        context: "Digital Influencer Produtores de conteúdo, afiliados, blogger, ou qualquer atividade digital. Conhecemos profundamente esse segmento e oferecemos o planejamento tributário e contábil adequado a suas necessidades.",
-                        cta: "Fazer contato agora",
-                        urlAction: "#"
-                    }
+                    // {
+                    //     title: "Empregada Doméstica",
+                    //     context: "Aqui o a sua doméstica fica 100% dentro da Lei e com todos os seus direitos garantidos. Gerenciamento completo, guia DAE, envio de documentação do mês, suporte telefônico, chat e e-mail, fazemos seu cadastro no eSocial, emitimos todos os documentos de admissão.",
+                    //     cta: "Fazer contato agora",
+                    //     urlAction: "#"
+                    // },
+                    // {
+                    //     title: "Youtuber",
+                    //     context: "Digital Influencer Produtores de conteúdo, afiliados, blogger, ou qualquer atividade digital. Conhecemos profundamente esse segmento e oferecemos o planejamento tributário e contábil adequado a suas necessidades.",
+                    //     cta: "Fazer contato agora",
+                    //     urlAction: "#"
+                    // }
 
                 ]}
                 buttonAction={{

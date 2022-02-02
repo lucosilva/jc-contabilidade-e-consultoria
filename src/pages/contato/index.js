@@ -14,7 +14,7 @@ function Contato() {
                             <div className="left">
                                 <div className="enderecos">
                                     <span>Endereço</span>
-                                    <p>Rua Dr. Silva Mendes, 855, Vila Industrial, Campinas-SP CEP13035-580</p>
+                                    <p>Rua Victório Santim, 2381, conjunto 11, Itaquera - SP, CEP: 08290-001</p>
                                 </div>
                                 <div className="atendimento">
                                     <span>Atendimento</span>

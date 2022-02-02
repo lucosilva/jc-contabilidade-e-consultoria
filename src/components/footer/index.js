@@ -21,7 +21,7 @@ function Footer() {
                         <h3> O objetivo da nossa empresa de contabilidade vai além da execução das rotinas legais impostas pelo fisco. </h3>
                         <p>Oferecemos a nossos clientes, uma relação próxima e transparente, onde a troca de experiência e conhecimento faz parte do dia-a-dia.</p>
                        
-                    <ButtonAction url="#" titulo="Faça seu orçamento"/>
+                    <ButtonAction url="/contato/" titulo="Faça seu orçamento"/>
                     </div>
                     <nav>
                         <div className="menuItem">
@@ -29,18 +29,17 @@ function Footer() {
                              <span> Serviços </span>                            
                             </div>
                             <ul>
-                                <li><Link to="#">Contabilidade para Médicos</Link></li>
-                                <li><Link to="#">Contabilidade para Advogados</Link></li>
-                                <li><Link to="#">Contabilidade para TI</Link></li>
-                                <li><Link to="#">Contabilidade MEI</Link></li>                                
+                                <li><Link to="/segmentos/contabilidade-para-medicos/">Contabilidade para Médicos</Link></li>
+                                <li><Link to="/segmentos/contabilidade-para-advogados/">Contabilidade para Advogados</Link></li>
+                                <li><Link to="/segmentos/contabilidade-para-ti/">Contabilidade para TI</Link></li>
+                                <li><Link to="/segmentos/contabilidade-para-mei/">Contabilidade MEI</Link></li>                                
                             </ul>
                         </div>
                         <div className="menuItem">
                             <div className="header">
-                             <span> Sobre nós </span>                            
+                             <span> Outros </span>                            
                             </div>
                             <ul>
-                                <li><Link to="/historia/">Quem somos</Link></li>
                                 <li><Link to="/privacidade/">Privacidade</Link></li>
                                  {/* eslint-disable-next-line */}
                                 <li><a href="http://consultoriatributariaefiscal.blogspot.com/" rel="noopener" target="_blank">Blog</a></li>

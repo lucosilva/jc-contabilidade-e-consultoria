@@ -17,7 +17,7 @@ function Servicos() {
 
             <div className="servicos-title">
                 <div className="container">
-                    <h3>Traga sua empresa para a OSP</h3>
+                    <h3>Traga sua empresa para JC contabilidade e Consultoria</h3>
                     <p>Temos uma GRANDE expertise nos seguintes setores.</p>
                 </div>
             </div>
@@ -28,7 +28,7 @@ function Servicos() {
                     {
                         title: "Abertura de Empresas",
                         icon_main: FiCheckCircle,
-                        context: "Aqui na OSP Digital, você começa com o pé direito. Centenas de clientes satisfeitos."
+                        context: "Aqui na JC contabilidade e Consultoria você começa com o pé direito. Centenas de clientes satisfeitos."
                     },
                     {
                         title: "Folha e Pró Labore",
