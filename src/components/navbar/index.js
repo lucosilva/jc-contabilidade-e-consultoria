@@ -98,11 +98,12 @@ function NavBar({ active }) {
                         <li className="nav-item">
                             <Link className="nav-link" to="/contato/">Fale Conosco</Link>
                         </li>
+
                     </ul>
+                        <ButtonAction url="/contato/" titulo="Faça seu orçamento" classAdd="ms-sm-auto me-sm-3 btn-contrate " />
                 </div>
 
-                {/* <button type="button" className="btn btn-warning ms-sm-auto me-sm-3 btn-contrate">Faça seu Orçamento</button> */}
-                <ButtonAction url="/contato/" titulo="Faça seu orçamento" classAdd="ms-sm-auto me-sm-3 btn-contrate " />
+                
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
