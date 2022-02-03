@@ -4,7 +4,10 @@ import Home from './pages/home';
 import Medico from './pages/segmentos/medicos';
 import Advogados from './pages/segmentos/advogados';
 import TI from './pages/segmentos/TI';
+import Influencer from './pages/segmentos/Influencer';
 import MEI from './pages/segmentos/MEI';
+import Geral from './pages/segmentos/geral';
+
 import NovaEmrpresa from './pages/nova-empresa';
 import Contato from './pages/contato';
 import Privacidade from './pages/privacidade';
@@ -23,6 +26,8 @@ function RoutesPage() {
                 <Route path="/segmentos/contabilidade-para-advogados/" element={<Advogados />} />
                 <Route path="/segmentos/contabilidade-para-ti/" element={<TI />} />
                 <Route path="/segmentos/contabilidade-para-mei/" element={<MEI />} />
+                <Route path="/segmentos/contabilidade-para-influenciadores/" element={<Influencer />} />
+                <Route path="/segmentos/contabilidade-para-comercios-em-geral/" element={<Geral />} />
 
                 <Route path="*" element={<Page404 />} />
             </Routes>

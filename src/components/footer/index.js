@@ -32,7 +32,9 @@ function Footer() {
                                 <li><Link to="/segmentos/contabilidade-para-medicos/">Contabilidade para Médicos</Link></li>
                                 <li><Link to="/segmentos/contabilidade-para-advogados/">Contabilidade para Advogados</Link></li>
                                 <li><Link to="/segmentos/contabilidade-para-ti/">Contabilidade para TI</Link></li>
-                                <li><Link to="/segmentos/contabilidade-para-mei/">Contabilidade MEI</Link></li>                                
+                                <li><Link to="/segmentos/contabilidade-para-mei/">Contabilidade para MEI</Link></li>                                
+                                <li><Link to="/segmentos/contabilidade-para-influenciadores/">Contabilidade para Influenciadores</Link></li>                                
+                                <li><Link to="/segmentos/contabilidade-para-comercios-em-geral/">Contabilidade para Comércio Geral</Link></li>                                
                             </ul>
                         </div>
                         <div className="menuItem">

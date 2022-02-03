@@ -5,25 +5,25 @@ import Banner from '../../../components/mainBanner-nivel-two';
 import ImageWithText from '../../../components/image-with-text';
 import Form from '../../../components/full-form';
 
-import imgBanner from '../../../assets/homem-segurando-maleta.jpg';
-import imgText from '../../../assets/dois-homens-se-comprimentando.jpg';
+import imgBanner from '../../../assets/geral1.jpg';
+import imgText from '../../../assets/geral.jpg';
 
-function SegmentoAdvogados() {
+function SegmentoGeral() {
 
     return (
         <DefaultComponent navAction="segmento">
-            <section className="segmento-advogados">
+            <section className="segmento-influencer">
 
                 <Banner
-                    titulo="Contabilidade para Advogados"
+                    titulo="Contabilidade para Comércios em geral"
                     subtitulo="Segmentos"
                     urlImg={imgBanner}
                 />
 
                 <ImageWithText
-                    titulo="Serviços contábeis para quem é referência no segmento jurídico"
-                    subtitulo="A JC Contabilidade traz um serviço exclusivo e dedicado de Contabilidade para Advogados e Escritórios de Advocacia."
-                    paragrafo="Seja pela modalidade Sociedade Unipessoal de Advogados, ou outra modalidade societária, seja qual for o enquadramento do seu negócio, a contabilidade especializada para advogados pode oferecer amparo na organização de seu faturamento, impostos e tributos mensais, entre outras demandas."
+                    titulo="Consultoria e assessoria contábil para comércios em geral"
+                    subtitulo=""
+                    paragrafo="Bares, restaurantes, padarias, adegas, perfumarias, autopeças, pet shop, drogarias, pizzarias, mercados, lojas de roupas, outros."
                     urlImg={imgText}
                     btn={{
                         ancora: "1000",
@@ -39,4 +39,4 @@ function SegmentoAdvogados() {
     );
 }
 
-export default SegmentoAdvogados;
+export default SegmentoGeral;

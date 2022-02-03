@@ -27,6 +27,8 @@ function SegmentoTI() {
                                 A escolha correta do enquadramento contábil é fundamental para o crescimento do negócio."
                     urlImg={imgText}
                     btn={{
+                        ancora: "1000",
+                        ancoraMobile: "1350",
                         cta: "Consulte-nos",
                         url: "#",
                         classAdd: "bg-black"

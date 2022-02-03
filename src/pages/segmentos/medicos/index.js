@@ -26,6 +26,8 @@ function SegmentoMedico() {
                     paragrafo="Nossa expertise permite que você tenha o controle completo de suas obrigações tributárias e fiscais, com um atendimento direcionado às oportunidades econômicas e de adequação tributária para que o seu negócio tenha mais sucesso."
                     urlImg={imgText}
                     btn={{
+                        ancora: "1000",
+                        ancoraMobile: "1350",
                         cta: "Consulte-nos",
                         url: "#",
                         classAdd: "bg-black"

@@ -38,19 +38,19 @@ function ListaServicos() {
                         context: "Destaque-se dentre os Microempreendedores individuais, contrate uma assessoria contábil e esteja preparado para o crescimento.",
                         cta: "Fazer contato agora",
                         urlAction: "/segmentos/contabilidade-para-mei/"
+                    },                   
+                    {
+                        title: "Digital Influencer",
+                        context: "Produtores de conteúdo, youtubers, afiliados, blogger, ou qualquer atividade digital. Conhecemos profundamente esse segmento e oferecemos o planejamento tributário e contábil adequado a suas necessidades.",
+                        cta: "Fazer contato agora",
+                        urlAction: "/segmentos/contabilidade-para-influenciadores/"
                     },
-                    // {
-                    //     title: "Empregada Doméstica",
-                    //     context: "Aqui o a sua doméstica fica 100% dentro da Lei e com todos os seus direitos garantidos. Gerenciamento completo, guia DAE, envio de documentação do mês, suporte telefônico, chat e e-mail, fazemos seu cadastro no eSocial, emitimos todos os documentos de admissão.",
-                    //     cta: "Fazer contato agora",
-                    //     urlAction: "#"
-                    // },
-                    // {
-                    //     title: "Youtuber",
-                    //     context: "Digital Influencer Produtores de conteúdo, afiliados, blogger, ou qualquer atividade digital. Conhecemos profundamente esse segmento e oferecemos o planejamento tributário e contábil adequado a suas necessidades.",
-                    //     cta: "Fazer contato agora",
-                    //     urlAction: "#"
-                    // }
+                    {
+                        title: "Comércios em geral",
+                        context: "Bares, restaurantes, padarias, adegas, perfumarias, autopeças, pet shop, drogarias, pizzarias, mercados, lojas de roupas, etc.",
+                        cta: "Fazer contato agora",
+                        urlAction: "/segmentos/contabilidade-para-comercios-em-geral/"
+                    }                    
 
                 ]}
                 buttonAction={{

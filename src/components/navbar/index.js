@@ -89,7 +89,9 @@ function NavBar({ active }) {
                                 <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-medicos/">Contabilidade para Médicos</Link></li>
                                 <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-advogados/">Contabilidade para Advogados</Link></li>
                                 <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-ti/">Contabilidade para TI</Link></li>
-                                <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-mei/">Contabilidade MEI</Link></li>
+                                <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-mei/">Contabilidade para MEI</Link></li>
+                                <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-influenciadores/">Contabilidade para Influenciadores</Link></li>
+                                <li><Link className="dropdown-item" to="/segmentos/contabilidade-para-comercios-em-geral/">Contabilidade para Comércio Geral</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item me-xl-3">

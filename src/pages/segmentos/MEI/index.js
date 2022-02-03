@@ -26,6 +26,8 @@ function SegmentoMEI() {
                     paragrafo="Com a JC Contabilidade, é possível organizar as suas contas e obrigações contábeis com o melhor custo-benefício e sem burocracia. E com assessoria de um especialista que conhece bem o seu segmento, conseguirá atingir oportunidades que trarão expansão e grandes resultados"
                     urlImg={imgText}
                     btn={{
+                        ancora: "1000",
+                        ancoraMobile: "1350",
                         cta: "Consulte-nos",
                         url: "#",
                         classAdd: "bg-black"
