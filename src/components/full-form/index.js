@@ -1,9 +1,35 @@
 import React, { useState } from 'react';
 import './style.css';
 import ButtonAction from '../button';
+import nodemailer from 'nodemailer';
 
 function Form() {
     
+    var transporter;
+
+    async function handleSubmit(e){
+        e.preventDefault();
+
+        transporter = nodemailer.createTransport({
+            host: 'smtp.zoho.com',
+            port: 465,
+            secure: true, // true for 465, false for other ports
+            auth: {
+                user: 'naoresponda@jcconsultoria.srv.br', // generated ethereal user
+                pass: 'Cosmo@2022', // generated ethereal password
+            },
+        });
+
+        transporter.sendMail({
+            from: 'naoresponda@jcconsultoria.srv.br', // sender address
+            to: "naoresponda@jcconsultoria.srv.br", // list of receivers
+            subject: "teste", // Subject line
+            text: "Hello world?", // plain text body
+            html: "<b>Hello world?</b>", // html body
+            stream: false,
+          });
+    }
+
     return (
         <section className='form-container'>
             <form>
@@ -83,7 +109,7 @@ function Form() {
                     <label for="comentarios">Escreva sua mensagem:</label>
                 </div>
 
-                <button type="submit">Solicitar Orçamento</button>
+                <button onClick={(e)=>{handleSubmit(e).catch(console.error)}} >Solicitar Orçamento</button>
             </form>
         </section>
     )
