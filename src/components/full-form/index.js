@@ -1,34 +1,81 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './style.css';
-import ButtonAction from '../button';
-import nodemailer from 'nodemailer';
 
 function Form() {
-    
-    var transporter;
 
-    async function handleSubmit(e){
-        e.preventDefault();
-
-        transporter = nodemailer.createTransport({
-            host: 'smtp.zoho.com',
-            port: 465,
-            secure: true, // true for 465, false for other ports
-            auth: {
-                user: 'naoresponda@jcconsultoria.srv.br', // generated ethereal user
-                pass: 'Cosmo@2022', // generated ethereal password
-            },
-        });
-
-        transporter.sendMail({
-            from: 'naoresponda@jcconsultoria.srv.br', // sender address
-            to: "naoresponda@jcconsultoria.srv.br", // list of receivers
-            subject: "teste", // Subject line
-            text: "Hello world?", // plain text body
-            html: "<b>Hello world?</b>", // html body
-            stream: false,
-          });
+    const history = useNavigate();
+    const valueInit = {
+        name: "",
+        email: "",
+        tel: "",
+        estado: "Nenhum",
+        municipio: "",
+        assunto: "Nenhum",
+        msg: ""
     }
+
+    const [dataForm, setDataForm] = useState(valueInit);
+
+    function handleChange(key, newValue) {
+        setDataForm({
+            ...dataForm,
+            [key]: newValue
+        });
+    }
+
+    function sendEmail() {
+
+        const API_URL = "https://app-send-email-v2.herokuapp.com/data/form/";
+
+        fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(dataForm),
+        })
+            .then(async (dataServer) => {
+
+                if (dataServer.ok) {
+                    history('/formulario/sucesso/');                    
+                    return await dataServer.json();
+                } 
+                throw new Error('server fora do ar')
+            });
+    }
+
+    function handleSelect(key, event) {
+
+        let option = event[event.selectedIndex];
+        let newValue = option.text;
+
+        setDataForm({
+            ...dataForm,
+            [key]: newValue
+        });
+    }
+
+    function clearForm() {
+        setDataForm(valueInit);
+
+        let estadoEl = document.querySelector("#estado");
+        let assuntoEl = document.querySelector("#assunto");
+
+        let optionEstado = estadoEl[estadoEl.selectedIndex];
+        let optionAssunto = assuntoEl[assuntoEl.selectedIndex];
+
+        optionEstado.selected = false;
+        optionAssunto.selected = false;
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        sendEmail();
+        clearForm();
+    }
+
 
     return (
         <section className='form-container'>
@@ -40,22 +87,41 @@ function Form() {
                 <p>Preencha o nosso formulario, entraremos em contato com você o mais breve possivel.</p>
 
                 <div className="form-floating">
-                    <input type="text" class="form-control" id="nome" placeholder="Francisco Alves" />
-                    <label for="nome">Informe seu nome:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Francisco Alves"
+                        onChange={(event) => {
+                            handleChange('name', event.target.value);
+                        }}
+                        value={dataForm.name}
+                    />
+                    <label for="nome">Informe seu nome</label>
                 </div>
 
                 <div className="form-floating">
-                    <input type="email" className="form-control" id="email" placeholder="name@example.com" />
+                    <input type="email" className="form-control" id="email" placeholder="name@example.com"
+                        onChange={(event) => {
+                            handleChange('email', event.target.value);
+                        }}
+                        value={dataForm.email}
+                    />
                     <label for="email">E-mail</label>
                 </div>
 
                 <div className="form-floating">
-                    <input type="tel" className="form-control" id="telefone" placeholder="11 9xxx-xxxx" />
+                    <input type="tel" className="form-control" id="telefone" placeholder="11 9xxx-xxxx"
+                        onChange={(event) => {
+                            handleChange('tel', event.target.value);
+                        }}
+                        value={dataForm.tel}
+                    />
                     <label for="telefone">Telefone</label>
                 </div>
 
                 <div className="form-floating">
-                    <select className="form-select" id="estado" aria-label="Estados">
+                    <select className="form-select" id="estado" aria-label="Estados"
+                        onChange={(event) => {
+                            handleSelect('estado', event.target);
+                        }}
+                    >
                         <option selected>Nenhum</option>
                         <option value="1">Acre - AC</option>
                         <option value="2">Alagoas - AL</option>
@@ -89,12 +155,21 @@ function Form() {
                 </div>
 
                 <div className="form-floating">
-                    <input type="text" class="form-control" id="cidade" placeholder="Francisco Alves" />
+                    <input type="text" class="form-control" id="cidade" placeholder="Francisco Alves"
+                        onChange={(event) => {
+                            handleChange('municipio', event.target.value);
+                        }}
+                        value={dataForm.municipio}
+                    />
                     <label for="cidade">Informe seu município</label>
                 </div>
 
                 <div className="form-floating">
-                    <select className="form-select" id="assunto" aria-label="Estados">
+                    <select className="form-select" id="assunto" aria-label="assunto"
+                        onChange={(event) => {
+                            handleSelect('assunto', event.target);
+                        }}
+                    >
                         <option selected>Nenhum</option>
                         <option value="1">Abertura de empresa</option>
                         <option value="2">Serviço de Assessoria Contabil</option>
@@ -105,11 +180,16 @@ function Form() {
                 </div>
 
                 <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="comentarios" style={{ 'height': '100px' }}></textarea>
+                    <textarea className="form-control" placeholder="Leave a comment here" id="comentarios" style={{ 'height': '100px' }} 
+                     onChange={(event) => {
+                        handleChange('msg', event.target.value);
+                    }}
+                    value={dataForm.msg}
+                    ></textarea>
                     <label for="comentarios">Escreva sua mensagem:</label>
                 </div>
 
-                <button onClick={(e)=>{handleSubmit(e).catch(console.error)}} >Solicitar Orçamento</button>
+                <button onClick={(e) => { handleSubmit(e) }} >Solicitar Orçamento</button>
             </form>
         </section>
     )

@@ -13,6 +13,7 @@ import Contato from './pages/contato';
 import Privacidade from './pages/privacidade';
 
 import Page404 from './pages/page404';
+import Success from './pages/success';
 
 function RoutesPage() {
     return (
@@ -28,6 +29,7 @@ function RoutesPage() {
                 <Route path="/segmentos/contabilidade-para-mei/" element={<MEI />} />
                 <Route path="/segmentos/contabilidade-para-influenciadores/" element={<Influencer />} />
                 <Route path="/segmentos/contabilidade-para-comercios-em-geral/" element={<Geral />} />
+                <Route path="/formulario/sucesso/" element={<Success />} />
 
                 <Route path="*" element={<Page404 />} />
             </Routes>
