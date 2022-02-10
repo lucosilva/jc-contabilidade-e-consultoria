@@ -30,7 +30,7 @@ function Contato() {
                                     <h4>Oferecemos a nossos clientes, uma relação próxima e transparente, onde a troca de experiência e conhecimento faz parte do dia-a-dia.</h4>
                                 </div>
                                 <div className="email">
-                                    <p>contato@clf.srv.br</p>
+                                    <p>contato@jcconsultoria.srv.br</p>
                                 </div>
                             </div>
                         </div>

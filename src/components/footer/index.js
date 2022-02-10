@@ -55,7 +55,7 @@ function Footer() {
                                 <li>Fique à vontade para entrar em contato conosco por telefone ou enviar mensagem.</li>
                                 <li><a href='tel:1123381893'>(11) 2338-1893</a></li>
                                 <li><a href='tel:964674634'>(11) 9 6467-4634</a></li>
-                                <li><a href='mailto:contato@clf.srv.br?subject=gostaria de solicitar um orçamento'>contato@clf.srv.br</a></li>
+                                <li><a href='mailto:contato@jcconsultoria.srv.br?subject=gostaria de solicitar um orçamento'>contato@jcconsultoria.srv.br</a></li>
                             </ul>
                         </div>                
                     </nav>
