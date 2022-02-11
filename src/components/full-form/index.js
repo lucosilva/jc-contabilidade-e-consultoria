@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
 import './style.css';
+import { useNavigate } from 'react-router-dom';
+import InputMask from 'react-input-mask';
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const quinzeSegundosDuracaoNotificacao = 15 * 1000;
+toast.configure({ autoClose: quinzeSegundosDuracaoNotificacao, theme: "dark" });
+
 
 function Form() {
 
@@ -25,25 +31,42 @@ function Form() {
         });
     }
 
-    function sendEmail() {
+    async function sendEmail() {
 
         const API_URL = "https://app-send-email-v2.herokuapp.com/data/form/";
 
-        fetch(API_URL, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify(dataForm),
-        })
-            .then(async (dataServer) => {
+        const response = await toast.promise(
+            fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(dataForm),
+            }),
+            {
+                pending: 'Estamos recebendo os seus dados...',
+                success: 'Tudo ok. recebemos tudo! 👌',
+                error: 'Server fora do ar, favor nos envie um e-mail. 🤯'
+            }, 
+            {
+                position: toast.POSITION.TOP_CENTER,
+                theme: "dark"
+            }
+        );
 
-                if (dataServer.ok) {
-                    history('/formulario/sucesso/');                    
-                    return await dataServer.json();
-                } 
-                throw new Error('server fora do ar')
+
+        if (response.ok) {
+            history('/formulario/sucesso/');
+            return await response.json();
+        } else {
+            toast.dismiss();
+            toast.error('Nosso servidor está indisponivel no momento.🤯 \n Tente novamente mais tarde ou nos envie um e-mail',
+            {
+                position: toast.POSITION.TOP_CENTER,
+                theme: "dark"
             });
+        }
+        throw new Error('server fora do ar');
     }
 
     function handleSelect(key, event) {
@@ -70,10 +93,149 @@ function Form() {
         optionAssunto.selected = false;
     }
 
+    function validateForm() {
+        return {
+            email: validateEmail(),
+            tel: validateTel(),
+            name: validateName(),
+            estado: validateEstado(),
+            municipio: validateMunicipio(),
+            asunto: validateAssunto()
+        }
+    }
+
+    function validateTel() {
+        const sizeTel = dataForm.tel.length;
+
+        if (sizeTel < 17) {
+            //Não é um telefone válido
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validateName() {
+        const sizeName = dataForm.name.length;
+
+        if (sizeName < 1) {
+            //campo de texto vazio
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validateEmail() {
+
+        let valueEmail = dataForm.email;
+
+        let IsOthersChar = [];
+        const positionAT = valueEmail.indexOf("@"); //@
+        const positionDOT = valueEmail.lastIndexOf("."); //(.)
+
+        const othersChar = [' ', '!', '#', '$', '%', '¨', '&', '*', '(', ')', '-', '=', ',', '?', '´', '^', '~', '}', '{', '[', ']', ';', ':', '|', '₢', '/', '°'];
+
+        // eslint-disable-next-line
+        othersChar.map((charItem) => {
+            IsOthersChar.push(valueEmail.indexOf(charItem) > 0); // se retornar true, a string contem uma um char especial nela. 
+        })
+
+
+        if (positionAT < 1 || positionDOT < positionAT + 2 || positionDOT + 2 >= valueEmail.length || IsOthersChar.indexOf(true) >= 0) {
+            //Não é um endereço de e-mail válido
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validateMunicipio() {
+        const sizeMunicipio = dataForm.municipio.length;
+
+        if (sizeMunicipio < 1) {
+            //campo de texto vazio
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validateEstado() {
+        let estadoEl = document.querySelector("#estado");
+        let optionEstado = estadoEl[estadoEl.selectedIndex];
+        let optionValue = optionEstado.value;
+
+        if (optionValue === 'Nenhum') {
+            //campo de invalido
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validateAssunto() {
+        let assuntoEl = document.querySelector("#assunto");
+        let optionAssunto = assuntoEl[assuntoEl.selectedIndex];
+        let optionValue = optionAssunto.value;
+
+        if (optionValue === 'Nenhum') {
+            //campo de invalido
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    
     function handleSubmit(e) {
         e.preventDefault();
-        sendEmail();
-        clearForm();
+        toast.dismiss();
+        
+        const {
+            email,
+            tel,
+            name,
+            estado,
+            municipio,
+            asunto
+        } = validateForm();
+
+        if (email && tel && name && estado && municipio && asunto) {
+
+            sendEmail();
+            clearForm();
+        }
+
+        if (email === false) {
+            //toast de aviso email invalido    
+            toast.error('Endereço de e-mail não é válido. Tente novamente');
+        }
+
+        if (tel === false) {
+            //toast de aviso tel invalido
+            toast.warn('Telefone não é válido. Tente novamente');
+        }
+
+        if (name === false) {
+            //toast de aviso nome invalido
+            toast.warn('Campo de nome vazio, favor preencher.');
+        }
+
+        if (estado === false) {
+            //toast de aviso estado invalido
+            toast.warn('Campo de estado não selecionado, favor selecionar uma opção.');
+        }
+
+        if (asunto === false) {
+            //toast de aviso asunto invalido
+            toast.warn('Campo de asunto não selecionado, favor selecionar uma opção.');
+        }
+
+        if (municipio === false) {
+            //toast de aviso municipio invalido
+            toast.warn('Campo de municipio vazio, favor preencher.');
+        }
     }
 
 
@@ -107,12 +269,13 @@ function Form() {
                 </div>
 
                 <div className="form-floating">
-                    <input type="tel" className="form-control" id="telefone" placeholder="11 9xxx-xxxx"
+                    <InputMask type="tel" mask="(99) 9 9999 - 9999" maskChar={null} className="form-control" id="telefone" placeholder="11 9xxx-xxxx"
                         onChange={(event) => {
                             handleChange('tel', event.target.value);
                         }}
                         value={dataForm.tel}
-                    />
+                    >
+                    </InputMask>
                     <label for="telefone">Telefone</label>
                 </div>
 
@@ -180,11 +343,11 @@ function Form() {
                 </div>
 
                 <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="comentarios" style={{ 'height': '100px' }} 
-                     onChange={(event) => {
-                        handleChange('msg', event.target.value);
-                    }}
-                    value={dataForm.msg}
+                    <textarea className="form-control" placeholder="Leave a comment here" id="comentarios" style={{ 'height': '100px' }}
+                        onChange={(event) => {
+                            handleChange('msg', event.target.value);
+                        }}
+                        value={dataForm.msg}
                     ></textarea>
                     <label for="comentarios">Escreva sua mensagem:</label>
                 </div>
