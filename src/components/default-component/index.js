@@ -5,6 +5,7 @@ import Footer from '../../components/footer';
 import ButtonWhatsApp from '../../components/button_whatsapp';
 import Social from '../../components/social';
 import BtnScrollTop from '../../components/ArrowScrollTop';
+import PrivacyPolicyModal from '../../components/PrivacyPolicyModal';
 
 function DefaultComponent({ navAction ,children }) {
     return (
@@ -17,6 +18,7 @@ function DefaultComponent({ navAction ,children }) {
             </main>
             <Social/>
             <BtnScrollTop />
+            <PrivacyPolicyModal/>
         </>
     )
 }
